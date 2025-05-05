@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Surf Stay in Imsouane, Morocco | Olas Surf Camp</title>
+    <meta name="description" content="Book your surf camp stay in Imsouane, Morocco with Olas Surf Camp. Find the best accommodation and surf packages for your Imsouane surf trip.">
+    <meta name="keywords" content="Imsouane, surf camp, Morocco, surfing holidays, accommodation, surf packages, surf lessons, olas surf camp, taghazout, tamraght">
+    <link rel="canonical" href="https://booking.olassurfmorocco.com">  <style>
+        body { margin: 0; font-family: sans-serif; } /* Added a default font */
+        #booking-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #fallback-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="booking-container">
+        <iframe src="https://olas-surf-house-2.hotelrunner.com/bv3/search?locale=en-US&currency=EUR" 
+                title="Imsouane Surf Camp Booking"  loading="lazy">  </iframe>
+        <p id="fallback-message" style="display:none;">
+            We're experiencing temporary difficulties with the booking system. Please try again later or contact us directly.
+        </p>
+    </div>
+    <script>
+        // Basic error handling (optional, requires more robust solution for production)
+        const iframe = document.querySelector('iframe');
+        const fallbackMessage = document.getElementById('fallback-message');
+
+        iframe.addEventListener('load', () => {
+            // Optional:  Add logic to handle successful load if needed
+        });
+
+        iframe.addEventListener('error', () => {
+            iframe.style.display = 'none';
+            fallbackMessage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
